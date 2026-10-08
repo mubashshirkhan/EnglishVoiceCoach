@@ -25,13 +25,28 @@ def model_name() -> str:
     return os.getenv("WHISPER_MODEL", "small")
 
 
+def local_model_path() -> str:
+    configured_path = os.getenv("WHISPER_MODEL_PATH")
+    if configured_path:
+        return configured_path
+    return str(
+        Path(__file__).resolve().parent
+        / "modelscope-cache"
+        / "models"
+        / "Systran--faster-whisper-small"
+        / "snapshots"
+        / "master"
+    )
+
+
 def create_app(model: Any | None = None) -> FastAPI:
     @asynccontextmanager
     async def lifespan(app: FastAPI):
         app.state.model = model or WhisperModel(
-            model_name(),
+            local_model_path(),
             device=os.getenv("WHISPER_DEVICE", "cpu"),
             compute_type=os.getenv("WHISPER_COMPUTE_TYPE", "int8"),
+            local_files_only=True,
         )
         yield
 
