@@ -1,0 +1,27 @@
+# Java / Maven
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+stt/.venv/
+stt/modelscope-cache/
+tts/.venv/
+tts/voices/
+tts/*.wav
+stt/__pycache__/
+stt/.pytest_cache/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+npm-debug.log*
+
+# IDEs and OS files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local environment
+.env
+.env.*
+!.env.example

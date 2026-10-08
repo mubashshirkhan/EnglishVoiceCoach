@@ -1,0 +1,295 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17324d;
+  background: #edf5f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  background: radial-gradient(circle at top right, #d7ece8, transparent 45%), #edf5f4;
+}
+
+.coach-card {
+  width: min(720px, 100%);
+  padding: clamp(24px, 5vw, 48px);
+  border: 1px solid #d5e5e1;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 24px 80px rgba(38, 82, 85, 0.12);
+}
+
+.hero {
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #2e887d;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #123a54;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  margin: 12px 0 18px;
+  color: #587181;
+  font-size: 1.1rem;
+}
+
+.status {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.status-connected {
+  color: #176b57;
+  background: #ddf4e9;
+}
+
+.status-disconnected,
+.status-checking\.\.\. {
+  color: #8a5d25;
+  background: #fff1d6;
+}
+
+.conversation {
+  min-height: 220px;
+  max-height: 560px;
+  overflow-y: auto;
+  margin: 36px 0 24px;
+  padding: 24px;
+  border: 1px solid #e0ece9;
+  border-radius: 18px;
+  background: #f8fcfb;
+}
+
+.empty-state {
+  margin: 76px 0;
+  color: #76908f;
+  text-align: center;
+}
+
+.message {
+  padding: 12px 0;
+  border-bottom: 1px solid #e0ece9;
+}
+
+.user-message {
+  margin-bottom: 10px;
+}
+
+.ai-message {
+  margin: 10px 0;
+}
+
+.ai-message-text {
+  padding: 12px 0 0;
+}
+
+.message:last-child {
+  border-bottom: 0;
+}
+
+.message span {
+  color: #2e887d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.voice-state {
+  display: block;
+  margin-bottom: 6px;
+  color: #6d8589;
+  font-size: 0.72rem;
+}
+
+.message p {
+  margin: 5px 0 0;
+  line-height: 1.5;
+}
+
+.grammar-feedback {
+  padding: 16px;
+  border: 1px solid #f0d49c;
+  border-radius: 14px;
+  background: #fff9ed;
+}
+
+.feedback-heading {
+  display: block;
+  margin-bottom: 8px;
+  color: #9a641f;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.grammar-feedback strong {
+  display: block;
+  color: #17324d;
+  font-size: 1.08rem;
+}
+
+.grammar-error {
+  margin-top: 12px;
+  color: #5e6870;
+  font-size: 0.92rem;
+}
+
+.grammar-error p,
+.naturalness-feedback {
+  margin: 7px 0 0;
+  line-height: 1.45;
+}
+
+.naturalness-feedback {
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: #386c65;
+  background: #eaf6f2;
+}
+
+.loading-state,
+.error-state {
+  margin: 14px 0 0;
+  color: #6d8589;
+  text-align: center;
+}
+
+.error-state {
+  color: #a14c4c;
+}
+
+button:disabled,
+input:disabled {
+  opacity: 0.65;
+}
+
+.composer label {
+  display: block;
+  margin-bottom: 8px;
+  color: #496574;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.composer-row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  min-width: 0;
+  flex: 1;
+  padding: 13px 15px;
+  border: 1px solid #c8dcda;
+  border-radius: 12px;
+  color: #17324d;
+  outline: none;
+}
+
+input:focus {
+  border-color: #2e887d;
+  box-shadow: 0 0 0 3px rgba(46, 136, 125, 0.14);
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.send-button {
+  padding: 0 20px;
+  color: #fff;
+  background: #287d74;
+}
+
+.send-button:hover {
+  background: #1f675f;
+}
+
+.microphone-button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 13px;
+  color: #6d8589;
+  background: #e9f1ef;
+  color: #287d74;
+  background: #e9f1ef;
+  cursor: pointer;
+}
+
+.microphone-button:hover {
+  background: #d8ebe6;
+}
+
+.recording-button {
+  color: #a14c4c;
+  background: #fbe8e8;
+}
+
+.transcript {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid #c8dcda;
+  border-radius: 12px;
+  background: #f8fcfb;
+}
+
+.transcript span {
+  color: #2e887d;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.transcript p {
+  margin: 6px 0 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .composer-row {
+    flex-direction: column;
+  }
+
+  .send-button {
+    padding: 13px;
+  }
+}

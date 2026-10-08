@@ -1,0 +1,7 @@
+faster-whisper
+av==16.1.0
+fastapi
+uvicorn
+python-multipart
+pytest
+httpx
